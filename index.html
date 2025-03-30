@@ -123,19 +123,16 @@
       </div>
     </div>
     
-    <script>
-      // Play the audio after a set delay (e.g., after animations)
-      function playAudioAfterDelay(delay) {
-          setTimeout(function() {
-              var audio = document.getElementById("audio");
-              audio.muted = false;
-              audio.play().catch(function(error) {
-                  console.error("Error playing audio:", error);
-              });
-          }, delay);
-      }
-      playAudioAfterDelay(32000);
-    </script>
+<script>
+  function playAudio() {
+      var audio = document.getElementById("audio");
+      audio.muted = false;
+      audio.play().catch(function(error) {
+          console.error("Error playing audio:", error);
+      });
+  }
+</script>
+
     
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
